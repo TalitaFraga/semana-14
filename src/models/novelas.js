@@ -7,4 +7,10 @@ const novelasSchema = new mongoose.Schema({
     autor: {type: String},
     valeAPenaVerDeNovo: {type: Boolean}
 
+}, {
+    versionKey: false
 })
+
+const novelas = mongoose.model('novelas', novelasSchema)
+
+module.exports = novelas
